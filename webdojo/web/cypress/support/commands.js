@@ -33,3 +33,11 @@ Cypress.Commands.add('start', () => {
     cy.get('#password').type(senha)
     cy.contains('button', 'Entrar').click()
 })
+
+Cypress.Commands.add("goTo", (buttonName, pageTitle) => {
+    cy.contains("button", buttonName)
+            .should("be.visible")
+            .click()
+        cy.contains("h1", pageTitle)
+            .should("be.visible")
+})

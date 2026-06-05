@@ -1,0 +1,1 @@
+export CYPRESS_RUN_BINARY="C:\NinjaDoCypress\Cypress\Cypress.exe"
