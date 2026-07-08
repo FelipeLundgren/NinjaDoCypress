@@ -1,8 +1,7 @@
 describe('Tocar o video', () => {
 
     it('Deve tocar o video de exemplo', () => {
-        cy.start()
-        cy.submitLogin("papito@webdojo.com", "katana123")
+        cy.login()
 
         cy.goTo("Video", "Video")
 

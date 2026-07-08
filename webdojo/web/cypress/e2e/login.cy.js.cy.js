@@ -1,8 +1,7 @@
 describe("login",() => {
   it("Deve logar com sucesso",() =>{
-    cy.start()
-    cy.submitLogin("papito@webdojo.com","katana123")
-    
+    cy.login()
+
     cy.get('[data-cy="user-name"]')
     .should("be.visible")
     .and("contain", "Fernando Papito")
