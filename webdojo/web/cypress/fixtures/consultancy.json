@@ -1,0 +1,42 @@
+{
+  "personal": {
+    "name": "Felipe Lundgren",
+    "email": "felipe@webdojo.com",
+    "phone": "11 98765-4321",
+    "consultancyType": "Individual",
+    "personType": "cpf",
+    "document": "12345678900",
+    "discoveryChannels": [
+      "Instagram",
+      "LinkedIn",
+      "Udemy",
+      "YouTube",
+      "Indicação de Amigo"
+    ],
+    "file": "./cypress/fixtures/Document.pdf",
+    "description": "Gostaria de uma consultoria para minha empresa, focada em automação de testes.",
+    "tech": [
+      "Cypress",
+      "Selenium",
+      "Playwright"
+    ],
+    "terms": true
+  },
+  "company": {
+    "name": "Felipe Lundgren",
+    "email": "felipe@webdojo.com",
+    "phone": "11 98765-4321",
+    "consultancyType": "In Company",
+    "personType": "cnpj",
+    "document": "56.405.755/0001-20",
+    "discoveryChannels": [
+      "LinkedIn"
+    ],
+    "file": "./cypress/fixtures/Document.pdf",
+    "description": "Gostaria de uma consultoria para minha empresa, focada em automação de testes.",
+    "tech": [
+      "Cypress"
+    ],
+    "terms": true
+  }
+}

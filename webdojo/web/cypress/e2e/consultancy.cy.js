@@ -4,22 +4,11 @@ describe("Formulario de Consultoria", () => {
         cy.login()
         cy.goTo("Formulários", "Consultoria")
 
+        cy.fixture("consultancy").as("consultacyData")
     })
-    it("Deve solicitar consultoria individual", () => {
+    it("Deve solicitar consultoria individual", function () {
 
-        const consultancyForm = {
-            name: "Felipe Lundgren",
-            email: "felipe@webdojo.com",
-            phone: "11 98765-4321",
-            consultancyType: "Individual",
-            personType: "cpf",
-            document: "12345678900",
-            discoveryChannels: ["Instagram", "LinkedIn", "Udemy", "YouTube", "Indicação de Amigo"],
-            file: './cypress/fixtures/Document.pdf',
-            description: "Gostaria de uma consultoria para minha empresa, focada em automação de testes.",
-            tech: ["Cypress", "Selenium", "Playwright"],
-            terms: true
-        }
+        const consultancyForm = this.consultacyData.personal
 
         cy.get('#name').type(consultancyForm.name)
 
@@ -104,21 +93,9 @@ describe("Formulario de Consultoria", () => {
 
     })
 
-    it("Deve solicitar consultoria In Company", () => {
+    it("Deve solicitar consultoria In Company", function () {
 
-        const consultancyForm = {
-            name: "Felipe Lundgren",
-            email: "felipe@webdojo.com",
-            phone: "11 98765-4321",
-            consultancyType: "In Company",
-            personType: "cnpj",
-            document: "56.405.755/0001-20",
-            discoveryChannels: ["LinkedIn"],
-            file: './cypress/fixtures/Document.pdf',
-            description: "Gostaria de uma consultoria para minha empresa, focada em automação de testes.",
-            tech: ["Cypress"],
-            terms: true
-        }
+        const consultancyForm = this.consultacyData.company
 
         cy.get('#name').type(consultancyForm.name)
 
