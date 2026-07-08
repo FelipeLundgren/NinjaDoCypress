@@ -1,7 +1,6 @@
 describe('Kanban Board', () => {
     it('Deve mover uma tarefa de Todo para Done e atualizar o board', () => {
-        cy.start()
-        cy.submitLogin("papito@webdojo.com", "katana123")
+        cy.login()
         cy.goTo("Kanban", "Kanban Board")
 
         const dataTransfer = new DataTransfer()
